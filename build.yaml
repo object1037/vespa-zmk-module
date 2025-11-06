@@ -23,3 +23,9 @@ include:
     shield: vespa
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: vespa_fw
+  - board: seeeduino_xiao_ble
+    shield: vespa
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_SLEEP=n
+    artifact-name: vespa_fw_caffeinated
