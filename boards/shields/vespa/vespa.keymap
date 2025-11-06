@@ -8,12 +8,23 @@
 };
 
 / {
+  behaviors {
+    boot_unlock: boot_unlock {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <3000>;
+      bindings = <&bootloader>, <&studio_unlock>;
+      display-name = "Boot-unlock";
+    };
+  };
+
   combos {
     compatible = "zmk,combos";
     combo_studio {
       timeout-ms = <50>;
       key-positions = <0 11 36 47>; // ESC + - + LSHIFT + BSPC
-      bindings = <&studio_unlock>;
+      bindings = <&boot_unlock 0 0>;
     };
   };
 
@@ -45,9 +56,16 @@
 &kp C_MUTE     &kp F11  &kp F12 &trans       &trans     &trans       &trans    &trans   &trans   &trans   &trans   &trans
 &kp C_VOL_UP   &kp EXCL &kp AT  &kp HASH     &kp DLLR   &kp PRCNT    &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp UNDER
 &kp C_VOL_DN   &trans   &trans  &bt BT_PRV   &bt BT_NXT &trans       &trans    &trans   &trans   &trans   &trans   &trans
-&trans         &trans   &trans  &out OUT_USB &trans     &out OUT_BLE &trans    &trans   &trans   &trans   &trans   &trans
+&trans         &trans   &trans  &out OUT_USB &trans     &out OUT_BLE &trans    &trans   &trans   &trans   &trans   &bt BT_CLR_ALL
                                 &trans       &trans                            &trans   &trans
       >;
+    };
+
+    extra1 {
+      status = "reserved";
+    };
+    extra2 {
+      status = "reserved";
     };
   };
 };
