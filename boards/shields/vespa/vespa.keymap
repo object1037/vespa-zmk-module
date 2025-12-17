@@ -34,7 +34,7 @@
       #binding-cells = <0>;
       bindings
         = <&bt BT_SEL 0>
-        , <&to 0>
+        , <&to 1>
         ;
       label = "BT0";
     };
@@ -44,7 +44,7 @@
       #binding-cells = <0>;
       bindings
         = <&bt BT_SEL 1>
-        , <&to 1>
+        , <&to 0>
         ;
       label = "BT1";
     };
@@ -67,7 +67,7 @@
       bindings = <
 &trans    &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
 &trans    &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
-&kp LCTRL &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+&kp LWIN &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
 &trans    &trans  &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
                           &kp LCTRL &trans                    &trans  &trans
       >;
