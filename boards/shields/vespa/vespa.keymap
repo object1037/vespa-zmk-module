@@ -32,18 +32,20 @@
     BT0: BT0 {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = 
-        <&bt BT_SEL 0>
-        <&to 0>;
+      bindings
+        = <&bt BT_SEL 0>
+        , <&to 0>
+        ;
       label = "BT0";
     };
 
     BT1: BT1 {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
-      bindings = 
-        <&bt BT_SEL 1>
-        <&to 1>;
+      bindings
+        = <&bt BT_SEL 1>
+        , <&to 1>
+        ;
       label = "BT1";
     };
   };
