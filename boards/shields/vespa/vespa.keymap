@@ -33,8 +33,8 @@
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings
-        = <&bt BT_SEL 0>
-        , <&to 1>
+        = <&to 1>
+        , <&bt BT_SEL 0>
         ;
       label = "BT0";
     };
@@ -43,8 +43,8 @@
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings
-        = <&bt BT_SEL 1>
-        , <&to 0>
+        = <&to 0>
+        , <&bt BT_SEL 1>
         ;
       label = "BT1";
     };
